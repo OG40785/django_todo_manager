@@ -1,0 +1,33 @@
+<!-- This is a comment <ul>
+
+    {% for item in object_list %}
+  
+    <ol>{% if item.done %} 🟢
+       {% else %}
+        🔴
+    {% endif %}
+    
+    
+    {{ item.title }} 
+
+    </ol>
+    {% endfor %}
+  </ul>
+  -->  
+
+
+
+  <ul>
+    {% for item in todo_list %}
+    <ol>{% if item.done %} 🟢
+        {% else %}
+         🔴
+     {% endif %}
+     
+     
+     {{ item.title }} 
+     
+     </ol>
+
+    {% endfor %}
+</ul>
