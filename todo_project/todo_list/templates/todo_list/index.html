@@ -1,0 +1,11 @@
+{% extends 'todo_list/base.html' %}
+
+
+{% block body %}
+    <h2>ToDo Items List</h2>
+    <ul>
+        {% for item in object_list %}
+            <li>{{ item.title }}</li>
+        {% endfor %}
+    </ul>
+{% endblock body %}

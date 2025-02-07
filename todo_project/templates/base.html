@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% block title %} Base Title {% endblock title %}</title>
+    <link rel="stylesheet" href="../static/styles.css'">
+
+   
+
+
+  </head>
+
+  <body>
+    {% include "components/navbar.html" %}
+     {% block body %} Base Body! 
+     <h3>It is the {% now "jS \o\f F" %}</h3> 
+     {%    endblock body %}
+   
+
+    {% include "components/footer.html" %}
+  </body>
+</html>
