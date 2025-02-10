@@ -14,20 +14,30 @@
     {% endfor %}
   </ul>
   -->  
-
-
-
-  <ul>
-    {% for item in todo_list %}
-    <ol>{% if item.done %} 🟢
-        {% else %}
-         🔴
-     {% endif %}
-     
-     
-     {{ item.title }} 
-     
-     </ol>
-
-    {% endfor %}
-</ul>
+  <table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Status</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in todo_list %}
+        <tr>
+            <td> <a href="{% url 'todo_list:detail' item.id %}">{{item.id}}</a></td>
+            <td>
+                {% if item.done %} 🟢 {% else %} 🔴 {% endif %}
+            </td>
+            <td>{{ item.title }}</td>
+            <td>
+                <a href="{% url 'todo_list:update' item.id %}">Edit</a>
+            </td>
+            <td>
+                <a href="{% url 'todo_list:delete' item.id %}">Delete</a>
+            </td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
