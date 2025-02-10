@@ -9,3 +9,14 @@
         
     </ul>
 </nav>
+
+<nav class="bg-gray-800 p-4">
+    <ul class="flex space-x-6">
+        <li><a href="{% url 'index' %}" class="text-white hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="text-white hover:text-gray-300">About</a></li>
+        <li><a href="{% url 'todo_list:list_of_todo' %}" class="text-white hover:text-gray-300">List of Todos</a></li>
+        <li><a href="{% url 'todo_list:done' %}" class="text-white hover:text-gray-300">List of Todos: Done</a></li>
+        <li><a href="{% url 'todo_list:categories' %}" class="text-white hover:text-gray-300">Categories</a></li>
+        <li><a href="{% url 'todo_list:create' %}" class="text-white hover:text-gray-300">Create Todo</a></li>
+    </ul>
+</nav>

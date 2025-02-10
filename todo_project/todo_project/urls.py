@@ -20,6 +20,7 @@ from django.urls import include
 from django.views.generic import TemplateView
 
 urlpatterns = [
+    path("__reload__/", include("django_browser_reload.urls")),
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="index.html"),name = 'index'),
     path('todo/', include('todo_list.urls')),
